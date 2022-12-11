@@ -10,8 +10,12 @@ https://nogi-blog.herokuapp.com
 *Some of the photo (incluing thumbnails) cannot be shown since they are missing from the original site.
 
 ## Run the app
-install python and required modules with  
-`pip install -r requirements.txt`
-  
-And run the app with  
+pre-requirement: python3.9 or above  
+(Optional) Start a virtual python environment for development  
+1. install required packages with  
+`pip install -r requirements.txt`  
+
+2. run scrap.py to get all the image and blog content locally  
+
+3. start a local host to run the app with  
 `flask run`
