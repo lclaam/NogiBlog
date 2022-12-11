@@ -15,7 +15,7 @@ pre-requirement: python3.9 or above
 1. install required packages with  
 `pip install -r requirements.txt`  
 
-2. run scrap.py to get all the image and blog content locally  
+2. run scrap.py to get all the images and blogs content locally  
 
 3. start a local host to run the app with  
 `flask run`
