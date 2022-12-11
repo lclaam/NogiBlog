@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+{% autoescape true %}
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Blog</title>
+  <meta name="theme-color" content="#fff">
+  <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,viewport-fit=cover">
+  <link rel="stylesheet" href="/static/style.css">
+  <style>
+    html, body {
+      width: 100%;
+      height: 100%;
+      margin: 0;
+      padding: 0;
+    }
+    .b--ld{
+        width: 100%;
+        height: 100%;
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: 1000;
+        background-color: #fff;
+    }
+    .b--ld__i{
+        opacity: 0;
+    }
+    .b--ld__in,
+    .b--hd,
+    .b--hm,
+    .b--prog,
+    .b--deco,
+    .b--gnv,
+    .b--gh,
+    .b--wrap,
+    .b--ptb,
+    .b--ph,
+    .b--ec,
+    .b--st,
+    .b--ns,
+    .b--nv,
+    .b--ev,
+    .b--cc,
+    .b--em{
+        visibility: hidden;
+    }
+  </style>
+  <!-- <link rel="preload" href="/files/46/assets/fonts1/icons.woff2" as="font" type="font/woff2" crossorigin=""> -->
+</head>
+<body>
+  <script>
+    $(window).load(function(){
+        $('#overlay').fadeOut();
+    });
+  </script>
+  <div id="overlay" class="center">
+    <div class="spinner"></div>
+    </br>Loading...
+  </div>
+  <div class="bd--mc js-st" style="min-height: 1722px;">
+    <header class="bd--hd">
+      <div class="bd--hd__in">
+        <div class="bd--hd__data js-pos js-tdg is-v" data-de=".07">
+          <h1 id="blog_title" class="bd--hd__ttl f--head a--tx js-tdi" style="transition-delay: 0s;">{{ data.title }}</h1>
+          <div class="bd--hd__sub">
+            <!-- <p id="creator" class="bd--hd__date a--tx js-tdi" style="transition-delay: 0.056s;">{{ data.creator }}</p> -->
+            <p id="upload_time" class="bd--hd__date a--tx js-tdi" style="transition-delay: 0.056s;">{{ data.pubdate }}</p>
+          </div>
+        </div>
+      </div>
+    </header>
+    
+    <div class="bd--ctt">
+      <div class="bd--ctt__in">
+        <div class="bd--mn">
+          <div class="bd--edit">
+            {% endautoescape %}
+            {% autoescape false %}
+            <div id="blog_content">{{ data.content }}</div>
+            {% endautoescape %}
+            {% autoescape true %}
+          </div> 
+          <div class="bd--pnv js-pos a--op is-v">
+            <div class="m--pnv">
+              <div class="m--pnv__in">
+                <!-- <div class="m--pnv__nv js-pos a--op is-v">
+                  <div id="last_blog" class="m--pnv__pn _p"></div>
+                  <div class="m--pnv__b"><a class="m--pnv__a m--fic hv--op" href="/s/n46/diary/MEMBER/list?ima=3230&amp;ct=48009" aria-label="Back">
+                      <div class="m--pnv__t _b m--fic">
+                        <div class="m--bg c--typd js-bg is-l" data-load="true" style="background-image: url(&quot;/files/46/assets/img/common/pagenav/back.png&quot;);"></div>
+                      </div></a></div>
+                  <div id="next_blog" class="m--pnv__pn _n"></div>
+                </div> -->
+                <div class="m--dcl _b _s-f js-tdg" data-de=".07">
+                  <div class="m--dcl__b _t js-tdi a--bd" style="transition-delay: 0s;"></div>
+                  <div class="m--dcl__b _b js-tdi a--bd" style="transition-delay: 0.056s;"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
+{% endautoescape %}
