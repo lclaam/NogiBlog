@@ -16,6 +16,13 @@ pre-requirement: python3.9 or above
 `pip install -r requirements.txt`  
 
 2. run scrap.py to get all the images and blogs content locally  
+`python scrap.py`
 
 3. start a local host to run the app with  
 `flask run`
+
+## Fetching Blog posts only
+Code fetching blog posts can be found in the below Google Colab Notebook  
+https://colab.research.google.com/drive/1s5V8WBXpH4jiwqfVTmPXktPgJaTs4YGZ?usp=sharing
+
+The html files can be downloaded without running python on your machines.
